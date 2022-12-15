@@ -1,0 +1,10 @@
+man(serg).
+man(gena).
+woman(ann).
+woman(janna).
+student(janna,bad).
+student(ann,great).
+student(gena,bad).
+student(serg,good).
+welldone(X):-student(X,great);student(X,good).
+?-welldone(X),man(X).
