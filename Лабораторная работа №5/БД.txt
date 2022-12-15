@@ -1,0 +1,8 @@
+film(movie1,[johnpeterson,maryBone,koletan],releasedate(1,june,2009),104, 109).
+film(movie2,[john1peterson1,mary1bone2],releasedate(11,june1,20091),10, 9).
+film(movie3,[john2peterson2,mary2bone2],releasedate(12,june2,20092),104, 15).
+film(movie4,[john3peterson3,mary3bone3],releasedate(13,june3,20093),5, 54).
+film(movie5,[johnpeterson,mary4bone4],releasedate(14,june4,20094),77, 109).
+success(X):-film(X,_,_,W,Z),Z>W.
+time(X,Y):-film(X,_,Y,_,_).
+featuring(X,Y):-film(Y,Z,_,_,_),member(X,Z).
